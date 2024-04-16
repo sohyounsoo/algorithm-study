@@ -17,6 +17,5 @@ public class PM_2016 {
     public static void main(String[] args) {
         int a = 5, b= 24;
         System.out.println(solution(a,b));
-        System.out.println(176%7);
     }
 }
