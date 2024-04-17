@@ -9,8 +9,8 @@ public class PM_문자열내마음대로정렬하기 {
 
     static List<String> solution(String[] testCode, int n){
         List<String> answers = Arrays.stream(testCode).sorted((o1, o2) -> {
-            char compareA = o1.toCharArray()[n];
-            char compareB = o2.toCharArray()[n];
+            char compareA = o1.charAt(n);
+            char compareB = o2.charAt(n);
 
             if (compareA == compareB) {
                 return o1.compareTo(o2);
@@ -19,6 +19,11 @@ public class PM_문자열내마음대로정렬하기 {
             return compareA - compareB;
 
         }).collect(Collectors.toList());
+
+        for(String a : answers){
+            System.out.println(a);
+        }
+
 
         return answers;
     }
