@@ -13,9 +13,7 @@ public class PM_문자열_내_마음대로_정렬하기 {
         int n = 1;
         Solution solution = new Solution();
 
-
         System.out.println(Arrays.toString(solution.solution(str, n)));
-
     }
 
     static class Solution {
