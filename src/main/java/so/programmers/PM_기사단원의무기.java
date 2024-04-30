@@ -27,9 +27,6 @@ public class PM_기사단원의무기 {
             else answer += i;
         }
 
-
-
         return answer;
-
     }
 }
