@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class PM_체육복 {
     public static int solution(int n, int[] lost, int[] reserve) {
-        int answer = 0;
         int count = 0;
         int lozer = lost.length;
         Arrays.sort(lost);
@@ -20,9 +19,9 @@ public class PM_체육복 {
             }
         }
 
-        for(int i=0; i<lozer; i++){
-            for(int j=0; j<reserve.length; j++){
-                if(lost[i] == reserve[j] +1 || lost[i] == reserve[j] -1) {
+        for(int i=0; i<lozer; i++) {
+            for(int j=0; j<reserve.length; j++) {
+                if(lost[i] == reserve[j]+1 || lost[i] == reserve[j]-1) {
                     lost[i] = 31;
                     reserve[j] = 31;
                     count ++;
