@@ -9,13 +9,13 @@ public class PM_같은숫자는싫어 {
         Solution solution = new Solution();
 
         int[] arr = {1,1,3,3,0,1,1};
-        for (int i : solution.soulition(arr)) {
+        for (int i : solution.solution(arr)) {
             System.out.print(i);
         }
     }
 
     static class Solution {
-        public int[] soulition(int[] arr) {
+        public int[] solution(int[] arr) {
             ArrayList<Integer> tempList = new ArrayList<>();
             int preNum = -1;
 
