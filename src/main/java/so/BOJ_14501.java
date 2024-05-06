@@ -5,10 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_14500 {
+public class BOJ_14501 {
 
     static int[] arr;
-    static boolean[] visit;
     static int n;
     static int m;
 
@@ -19,12 +18,11 @@ public class BOJ_14500 {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
         arr = new int [m];
-        visit = new boolean[n];
 
-        dfs(0);
+        dfs(0,0);
     }
 
-    private static void dfs(int depth) {
+    private static void dfs(int at, int depth) {
         if(depth == m) {
             for(int i : arr) {
                 System.out.print(i + " ");
@@ -33,13 +31,9 @@ public class BOJ_14500 {
             return;
         }
 
-        for (int i = 0; i < n; i++) {
-            if(!visit[i]) {
-                arr[depth] = i + 1;
-                visit[i] = true;
-                dfs(depth + 1);
-                visit[i] = false;
-            }
+        for (int i = at; i < n; i++) {
+            arr[depth] = i + 1;
+            dfs(i+1, depth + 1);
         }
     }
 
