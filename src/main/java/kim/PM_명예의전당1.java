@@ -1,8 +1,6 @@
 package kim;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class PM_명예의전당1 {
