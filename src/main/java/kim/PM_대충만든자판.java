@@ -13,9 +13,7 @@ public class PM_대충만든자판 {
                 compare_value = keymap[i].indexOf(c);
             }
         }
-
         if (compare_value == Integer.MAX_VALUE) return -1;
-
         return compare_value;
     }
 
