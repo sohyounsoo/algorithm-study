@@ -6,19 +6,15 @@ import java.util.List;
 public class PM_대충만든자판 {
 
     static int find_keymap(char c, String[] keymap){
-        int index = -1;
         int compare_value = Integer.MAX_VALUE;
 
         for(int i = 0 ; i < keymap.length ; i++){
             if(compare_value > keymap[i].indexOf(c) && keymap[i].indexOf(c) != -1) {
-                index = i;
                 compare_value = keymap[i].indexOf(c);
             }
         }
-
-        if (index == -1) return -1;
-
-        return keymap[index].indexOf(c);
+        if (compare_value == Integer.MAX_VALUE) return -1;
+        return compare_value;
     }
 
     static List<Integer> solution(String[] keymap, String[] targets){
